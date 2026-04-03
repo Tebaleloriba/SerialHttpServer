@@ -3,7 +3,7 @@ using System.IO.Ports;
 using System.Net;
 using System.Text;
 using System.Collections.Specialized;
-using System.Web; // Note: If this errors, see the NuGet tip below.
+using System.Web;
 
 class Program
 {
@@ -11,12 +11,12 @@ class Program
 
     static void Main(string[] args)
     {
-        // --- 1. SETTINGS ---
+        // SETTINGS 
         string portName = "COM1"; // The first half of your com0com pair
         int baudRate = 9600;
         string url = "http://localhost:8080/";
 
-        // --- 2. SETUP SERIAL PORT ---
+        // SETUP SERIAL PORT
         serialPort = new SerialPort(portName, baudRate);
 
         try
@@ -32,7 +32,7 @@ class Program
             return;
         }
 
-        // --- 3. SETUP HTTP SERVER ---
+        // SETUP HTTP SERVER 
         HttpListener listener = new HttpListener();
         listener.Prefixes.Add(url);
 
@@ -49,7 +49,7 @@ class Program
             return;
         }
 
-        // --- 4. MAIN LOOP ---
+        //MAIN LOOP 
         while (true)
         {
             try
