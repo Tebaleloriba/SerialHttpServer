@@ -12,7 +12,7 @@ class Program
     static void Main(string[] args)
     {
         // SETTINGS 
-        string portName = "COM1"; // The first half of your com0com pair
+        string portName = "COM1"; // The first half of the com0com pair
         int baudRate = 9600;
         string url = "http://localhost:8080/";
 
